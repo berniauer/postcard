@@ -1,0 +1,36 @@
+# Dependencies
+/node_modules
+
+# Buildolut! Hier sind Vorschläge für eine `.gitignore`-Datei und eine `README.md artifacts
+/dist
+/build
+/.output
+/.vite
+
+# Log files
+npm-debug.log*`-Datei, die du zu deinem Projekt hinzufügen kannst, bevor du den ersten Commit machst.
+
+---
+
+### `.gitignore`
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+
+Diese Datei sagt Git, welche Dateien und Ordner es ignorieren soll. Das ist wichtig, um keine unnötigen oder sens variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.iblen Daten ins Repository zu bekommen. Hostinger Horizons hat vielleicht schon eine erstellt, aber hier ist eine ziemlich umfassende Version fürenv.production.local
+.env.*.local
+
+# IDE and editor specific files
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions. ein Vite/React-Projekt:
