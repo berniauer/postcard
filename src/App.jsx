@@ -9,6 +9,7 @@ import PostcardEditorPage from '@/pages/PostcardEditorPage';
 import PostcardDetailPage from '@/pages/PostcardDetailPage';
 import SharePage from '@/pages/SharePage';
 import ImageGeneratorPage from '@/pages/ImageGeneratorPage';
+import PhotoStylePage from '@/pages/PhotoStylePage';
     import { Button } from '@/components/ui/button'; // Added import for Button
     
     import { Toaster } from '@/components/ui/toaster';
@@ -75,6 +76,7 @@ import ImageGeneratorPage from '@/pages/ImageGeneratorPage';
               <Route path="editor" element={<PostcardEditorPage />} />
               <Route path="editor/:postcardId" element={<PostcardEditorPage />} />
               <Route path="generator" element={<ImageGeneratorPage />} />
+              <Route path="photo-style" element={<PhotoStylePage />} />
             </Route>
             <Route path="/share/:shareToken" element={<SharePage />} /> 
             <Route path="/" element={<Navigate to={session ? "/dashboard/my-postcards" : "/login"} />} />
