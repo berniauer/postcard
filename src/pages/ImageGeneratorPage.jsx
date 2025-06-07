@@ -13,7 +13,8 @@ const postcardSizes = [
 const styles = [
   { label: 'Ölgemälde', value: 'oil painting' },
   { label: 'Cartoon', value: 'cartoon' },
-  { label: 'Skizze', value: 'sketch' }
+  { label: 'Skizze', value: 'sketch' },
+  { label: 'Ghibli', value: 'ghibli style' }
 ];
 
 const ImageGeneratorPage = () => {
