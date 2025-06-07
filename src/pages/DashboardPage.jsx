@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
     import { supabase } from '@/lib/supabaseClient';
     import { useToast } from '@/components/ui/use-toast';
     import { motion, AnimatePresence } from 'framer-motion';
-import { LogOut, LayoutDashboard, Image as ImageIcon, Users, UserCircle, PlusCircle, Menu, X as CloseIcon, PanelLeftClose, PanelRightClose, Wand2 } from 'lucide-react';
+import { LogOut, LayoutDashboard, Image as ImageIcon, Users, UserCircle, PlusCircle, Menu, X as CloseIcon, PanelLeftClose, PanelRightClose, Wand2, Palette } from 'lucide-react';
     import { cn } from '@/lib/utils';
 
     const DashboardPage = () => {
@@ -39,6 +39,7 @@ import { LogOut, LayoutDashboard, Image as ImageIcon, Users, UserCircle, PlusCir
         { name: 'Meine Postkarten', path: '/dashboard/my-postcards', icon: ImageIcon },
         { name: 'Öffentliche Galerie', path: '/dashboard/gallery', icon: Users },
         { name: 'Bildgenerator', path: '/dashboard/generator', icon: Wand2 },
+        { name: 'Foto Styler', path: '/dashboard/photo-style', icon: Palette },
       ];
 
       useEffect(() => {
