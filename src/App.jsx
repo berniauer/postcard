@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
     import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
     import LoginPage from '@/pages/LoginPage';
-    import DashboardPage from '@/pages/DashboardPage';
-    import ProfileOverview from '@/components/dashboard/ProfileOverview';
-    import MyPostcards from '@/components/dashboard/MyPostcards';
-    import PublicGallery from '@/components/dashboard/PublicGallery';
-    import PostcardEditorPage from '@/pages/PostcardEditorPage';
-    import PostcardDetailPage from '@/pages/PostcardDetailPage'; 
-    import SharePage from '@/pages/SharePage'; 
+import DashboardPage from '@/pages/DashboardPage';
+import ProfileOverview from '@/components/dashboard/ProfileOverview';
+import MyPostcards from '@/components/dashboard/MyPostcards';
+import PublicGallery from '@/components/dashboard/PublicGallery';
+import PostcardEditorPage from '@/pages/PostcardEditorPage';
+import PostcardDetailPage from '@/pages/PostcardDetailPage';
+import SharePage from '@/pages/SharePage';
+import ImageGeneratorPage from '@/pages/ImageGeneratorPage';
     import { Button } from '@/components/ui/button'; // Added import for Button
     
     import { Toaster } from '@/components/ui/toaster';
@@ -71,8 +72,9 @@ import React, { useState, useEffect } from 'react';
               <Route path="my-postcards" element={<MyPostcards />} />
               <Route path="gallery" element={<PublicGallery />} />
               <Route path="postcards/:postcardId" element={<PostcardDetailPage />} />
-              <Route path="editor" element={<PostcardEditorPage />} /> 
-              <Route path="editor/:postcardId" element={<PostcardEditorPage />} /> 
+              <Route path="editor" element={<PostcardEditorPage />} />
+              <Route path="editor/:postcardId" element={<PostcardEditorPage />} />
+              <Route path="generator" element={<ImageGeneratorPage />} />
             </Route>
             <Route path="/share/:shareToken" element={<SharePage />} /> 
             <Route path="/" element={<Navigate to={session ? "/dashboard/my-postcards" : "/login"} />} />
@@ -90,4 +92,5 @@ import React, { useState, useEffect } from 'react';
       );
     }
 
-    export default App;
+
+export default App;
