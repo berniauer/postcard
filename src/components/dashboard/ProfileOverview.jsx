@@ -169,7 +169,7 @@ import React, { useEffect, useState } from 'react';
                   </div>
                   {profile?.avatar_url && (
                     <div className="flex items-center space-x-3 p-3 bg-muted/30 rounded-md">
-                       <img-replace src={profile.avatar_url} alt="Avatar" className="h-10 w-10 rounded-full object-cover border-2 border-primary" />
+                       <img src={profile.avatar_url} alt="Avatar" className="h-10 w-10 rounded-full object-cover border-2 border-primary" />
                        <span>Avatar</span>
                     </div>
                   )}

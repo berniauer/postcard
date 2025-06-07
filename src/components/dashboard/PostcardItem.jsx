@@ -34,7 +34,7 @@ import React from 'react';
             <CardHeader className="pb-2">
               <div className="aspect-[3/2] bg-muted rounded-md mb-3 flex items-center justify-center overflow-hidden">
                 {postcard.rendered_image_url ? (
-                  <img-replace src={postcard.rendered_image_url} alt={postcard.title || 'Postkarte'} className="object-cover w-full h-full" />
+                  <img src={postcard.rendered_image_url} alt={postcard.title || 'Postkarte'} className="object-cover w-full h-full" />
                 ) : (
                   <div className="text-muted-foreground flex flex-col items-center">
                     <ImageIcon size={48} />
