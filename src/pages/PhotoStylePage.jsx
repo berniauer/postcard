@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
 import { useToast } from '@/components/ui/use-toast';
+import { createImageVariation } from '@/lib/openaiClient';
 
 const styles = [
   { label: 'Ölgemälde', value: 'oil painting' },
@@ -35,21 +36,12 @@ const PhotoStylePage = () => {
     }
     setLoading(true);
     try {
-      const formData = new FormData();
-      formData.append('image', file);
-      formData.append('prompt', `Apply ${style} style`);
-      formData.append('n', 1);
-      formData.append('size', '1024x1024');
-
-      const res = await fetch('https://api.openai.com/v1/images/variations', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
-        },
-        body: formData
+      const url = await createImageVariation({
+        file,
+        prompt: `Apply ${style} style`,
+        n: 1
       });
-      const data = await res.json();
-      setGeneratedUrl(data.data?.[0]?.url || '');
+      setGeneratedUrl(url);
     } catch (err) {
       toast({ title: 'Fehler bei der Bildgenerierung', description: err.message, variant: 'destructive' });
     }

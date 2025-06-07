@@ -54,6 +54,7 @@ Dies ist eine Web-Anwendung zur Erstellung, Verwaltung und zum Teilen digitaler 
         # .env
         VITE_SUPABASE_URL=DEINE_SUPABASE_PROJEKT_URL
         VITE_SUPABASE_ANON_KEY=DEIN_SUPABASE_ANON_KEY
+        VITE_OPENAI_API_KEY=DEIN_OPENAI_API_KEY
         ```
 
 5.  **Supabase Datenbank-Schema:**
